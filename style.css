@@ -1,0 +1,634 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "arial_mtbold";
+  src: url("fonts/arial-boldmt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "arial_mt";
+  src: url("fonts/arial_mt.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color palette */
+
+:root {
+  --cloudy-blue: #cad7dd;
+  --charcoal-grey: #373d40;
+  --greeny-blue: #49c8a8;
+  --tiffany-blue: #60e6c5;
+  --cloudy-blue-two: #b1bfcd;
+  --pale-grey: #f5f8f9;
+  --black: #383838;
+  --tangerine: #ff9500;
+  --sunflower-yellow: #ffd500;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+body {
+  font-family: "arial_mt", sans-serif;
+  margin: 0;
+  transition: all 300ms;
+  font-size: 16px;
+}
+
+.main-container {
+  transition: all 700ms;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  transition: all 700ms;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: "arial_mtbold", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--black);
+}
+
+p {
+  font-family: "arial_mt", sans-serif;
+  font-size: 1.375em;
+  line-height: 1.26;
+  text-align: center;
+  color: var(--black);
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.deg180 {
+  transform: rotate(0deg);
+}
+
+strong {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+/* Profile section
+  =========================
+  */
+
+.profile-area {
+  z-index: 999;
+  text-align: center;
+  display: block;
+  background-color: var(--sunflower-yellow);
+  background-origin: content-box;
+  /* max-width: 20%; */
+  min-height: 100vh;
+  padding-bottom: 115px;
+  /* margin-bottom: 70px; */
+  transition: all 700ms;
+}
+
+.avatar {
+  margin: 115px 0;
+  transition: ease-in-out 250ms;
+}
+
+.avatar:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.oval {
+  width: 63.8px;
+  height: 63.7px;
+  object-fit: contain;
+  background-color: var(--black);
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  transform: rotate(0deg);
+  transition: all 750ms;
+}
+
+.oval i {
+  border: solid #ffd300;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  margin-top: 15px;
+  height: 22px;
+  width: 22px;
+  border-radius: 3px;
+}
+
+.oval:hover {
+  cursor: pointer;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all 700ms;
+}
+
+/* Form Section
+==================================
+*/
+
+.form-area {
+  /* max-width: 80%; */
+  margin-bottom: 20px;
+  transition: all 700ms;
+  z-index: 0;
+  position: relative;
+  height: 100%;
+}
+
+.membership_form {
+  padding-top: 70px;
+}
+
+/* Form input placeholers */
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 16px;
+  color: #b1bfcd;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 16px;
+  color: #b1bfcd;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 16px;
+  color: #b1bfcd;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 16px;
+  color: #b1bfcd;
+}
+
+/* Input text boxes */
+
+input {
+  width: 100%;
+  height: 53px;
+  padding: 12px;
+  /* border: 1px solid #cad7dd; */
+  border: none;
+  border-radius: 5.3px;
+  resize: vertical;
+  font-size: 16px;
+  background-color: rgba(245, 248, 249, 0.8);
+  outline: none;
+  position: relative;
+}
+input:focus {
+  box-shadow: 0 0 5px #cad7dd;
+  border: 1px solid #cad7dd;
+  transition: all 250ms;
+}
+
+input {
+  cursor: default;
+}
+
+input:hover {
+  box-shadow: 0 0 5px #cad7dd;
+  border: 1px solid #cad7dd;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+/* Icon for date of birth input text box */
+input.dob {
+  background-image: url(images/calendar.svg);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+}
+
+/* Text box labels */
+label {
+  font-size: 16px;
+  font-family: "arial_mt", sans-serif;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Hide default radio button */
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+
+/* Global radio button labels styles */
+.radio-toolbar label {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  background-color: #f5f8f9;
+  padding: 10px 20px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  position: relative;
+  margin-right: 75px;
+}
+
+/* Gender section radio buttons
+====================================
+*/
+
+/* Gobal styles for radio button labels */
+.radio-toolbar span {
+  position: absolute;
+  left: 100%;
+  transform: translateY(50%);
+  margin-left: 10px;
+  color: #b1bfcd;
+}
+
+/* Gender - Male radio button styles */
+.radio-toolbar label.male {
+  background-color: #f5f8f9;
+  background-image: url(images/male_symbol.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+}
+
+/* Gender - Male radio button checked and hover styles */
+.radio-toolbar input[type="radio"]:checked + label.male {
+  background-color: #b1bfcd;
+  background-image: url(images/male_symbol_white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio-toolbar input[type="radio"]:hover + label.male {
+  border: 1px solid #b1bfcd;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+/* Gender - Female radio button styles */
+.radio-toolbar label.female {
+  background-color: #f5f8f9;
+  background-image: url(images/female_symbol.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+}
+
+/* Gender - Female radio button checked and hover styles */
+.radio-toolbar input[type="radio"]:checked + label.female {
+  background-color: #b1bfcd;
+  background-image: url(images/female_symbol_white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio-toolbar input[type="radio"]:hover + label.female {
+  border: 1px solid #b1bfcd;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+/* Membership section radio buttons
+====================================
+*/
+
+.radio-toolbar label.classic {
+  background-color: #f5f8f9;
+  background-image: url(images/card_grey.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+}
+
+.radio-toolbar label.classic:hover {
+  cursor: pointer;
+  border: 1px solid #b1bfcd;
+}
+
+.radio-toolbar input[type="radio"]:checked + label.classic {
+  background-color: #b1bfcd;
+  background-image: url(images/card_white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio-toolbar label.silver {
+  background-color: #f5f8f9;
+  background-image: url(images/card_grey.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+}
+
+.radio-toolbar label.silver:hover {
+  cursor: pointer;
+  border: 1px solid #b1bfcd;
+  transition: all 250ms;
+}
+
+.radio-toolbar input[type="radio"]:checked + label.silver {
+  background-color: #b1bfcd;
+  background-image: url(images/card_white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.radio-toolbar label.gold {
+  background-color: #f5f8f9;
+  background-image: url(images/card_grey.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #fff;
+}
+
+.radio-toolbar label.gold:hover {
+  cursor: pointer;
+  border: 1px solid #b1bfcd;
+  transition: all 250ms;
+}
+
+.radio-toolbar input[type="radio"]:checked + label.gold {
+  background-color: #b1bfcd;
+  background-image: url(images/card_white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Form buttons */
+
+.cancel_btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 53px;
+  border-radius: 5.3px;
+  background-color: var(--pale-grey);
+  margin-bottom: 10px;
+  margin-right: 20px;
+  transition: ease-in-out 250ms 250ms;
+}
+.cancel_btn:hover {
+  background-color: var(--cloudy-blue);
+  cursor: pointer;
+  border: none;
+  transition: 250ms ease-in-out 250ms;
+}
+
+.submit_btn {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 53px;
+  border-radius: 5.3px;
+  background-color: var(--tiffany-blue);
+  transition: ease-in-out 250ms 250ms;
+}
+
+.submit_btn:hover {
+  background-color: var(--greeny-blue);
+  cursor: pointer;
+  border: none;
+  transition: 250ms ease-in-out 250ms;
+}
+
+/* Form validation styles
+==============================
+*/
+
+/* This is the style of our error messages */
+.error {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: #ff9200;
+
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.error.active {
+  padding: 0.3em;
+}
+
+.err_indicator::before {
+  content: "˚";
+}
+
+/* Slider 
+==============================
+*/
+
+.slide {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: inherit;
+  background-color: #ff9200;
+  padding: 60px 20px;
+  margin-top: -60px;
+  transition: 700ms cubic-bezier(0, 1, 0, 1);
+  transform: translateY(5%);
+  top: 0;
+  transition: ease-in-out 700ms;
+}
+
+.slide_2 {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: inherit;
+  background-color: #ff9200;
+  padding: 60px 20px;
+  margin-top: 0;
+  transition: 700ms cubic-bezier(0, 1, 0, 1);
+  transform: translateX(0);
+  top: 0;
+  transition: ease-in-out 700ms;
+}
+
+.slide-up {
+  /* top: -100%; */
+  transform: translateY(-200%);
+  transition: ease-in-out 700ms;
+}
+
+.slide-right {
+  /* top: -100%; */
+  transform: translateX(-200%);
+  transition: ease-in-out 700ms;
+}
+
+.slide_header h1 {
+  color: var(--black);
+}
+
+.slide_content {
+  font-size: 18px;
+  text-align: left;
+  line-height: 27.6px;
+}
+
+.rotated-image {
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+/* Cols for responsive form 
+================================
+*/
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  position: relative;
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"],
+  input[type="button"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .submit_btn,
+  .cancel_btn {
+    width: 45%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    margin: 50px auto;
+    border-radius: 50px;
+    box-shadow: 2px 2px 40px #c2c2c2;
+    width: 90%;
+    height: 104vh;
+    transition: all 700ms;
+  }
+  .profile-area {
+    width: 40%;
+    float: left;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    height: 100%;
+    transition: all 700ms;
+  }
+  .form-area {
+    padding-top: 60px;
+    width: 60%;
+    float: left;
+    height: 100%;
+    transition: all 700ms;
+  }
+  .submit_btn,
+  .cancel_btn {
+    width: 40%;
+    margin-top: 0;
+    clear: right;
+  }
+  .submit_btn {
+    transform: translateX(40%);
+  }
+  .cancel_btn {
+    float: left;
+    transform: translateX(40%);
+  }
+
+  .oval {
+    transform: rotate(-90deg);
+  }
+  .membership_form {
+    padding-top: 0;
+  }
+
+  .slide {
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: -42px;
+  }
+  .slide_2 {
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: left;
+  }
+  .slide_2 p {
+    padding: 0 80px 80px 80px;
+  }
+  .slide_2 h1 {
+    text-align-last: left;
+    padding: 80px 80px 0 80px;
+  }
+  .slide_content strong {
+    font-weight: bold;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+    section.profile-area, .section.form-area {
+        width: 100%;
+        margin-top: 0;
+    }
+} */

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Member signup</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <section class="profile-area">
+        <div class="container">
+          <img class="avatar" src="images/avatar.png" alt="User avatar" />
+          <h1>Front-end challenge!</h1>
+          <p>This is a design that you will need to code up and impress us.</p>
+          <div id="toggleSlider" class="oval"><i class="arrow down"></i></div>
+          <!--
+            <img class="button_arrow" src="images/oval.png" alt="Oval background">
+          -->
+        </div>
+      </section>
+      <section id="form_area" class="form-area">
+        <div class="slide slide-up">
+          <h1 class="slide_header">My world today</h1>
+          <p class="slide_content">
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante.
+            <strong>View all days</strong> eu libero sit amet quam egestas
+            semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat
+            wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+            fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
+            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar
+            facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus,
+            tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam
+            erat
+          </p>
+        </div>
+        <div class="slide_2 slide-right">
+          <h1 class="slide_header">My world today</h1>
+          <p class="slide_content">
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante.
+            <strong>View all days</strong> eu libero sit amet quam egestas
+            semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat
+            wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
+            fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
+            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar
+            facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus,
+            tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam
+            erat
+          </p>
+        </div>
+        <div class="container">
+          <form novalidate class="membership_form">
+            <div class="row">
+              <div class="col-25"><label>Name</label></div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value="Kendall Jenner"
+                  placeholder="Your name.."
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25"><label>Gender</label></div>
+              <div class="col-75">
+                <div class="radio-toolbar">
+                  <input type="radio" id="male" name="gender" value="Male" />
+                  <label class="male" for="male"><span>Male</span></label>
+
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="Female"
+                  />
+                  <label class="female" for="female"><span>female</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25"><label>Date of Birth</label></div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="dob"
+                  name="dob"
+                  placeholder="01/02/1983"
+                  class="dob"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label id="email_label" for="email" class="err_indicator{"
+                  >Email</label
+                >
+              </div>
+              <div class="col-75">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="kendall@email.com"
+                  required
+                />
+                <span class="error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25"><label>Mobile</label></div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="mobile"
+                  name="mobile"
+                  placeholder="+91 98765 43210"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25"><label>Customer ID</label></div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="customer_id"
+                  name="customer_id"
+                  placeholder="576802-ERD0348 45"
+                />
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-25">
+                <label for="membership">Membership</label>
+              </div>
+              <div class="col-75">
+                <div class="radio-toolbar">
+                  <input
+                    type="radio"
+                    id="classic"
+                    name="membership"
+                    value="Classic"
+                    checked
+                  />
+                  <label class="classic" for="classic"
+                    ><span>Classic</span></label
+                  >
+
+                  <input
+                    type="radio"
+                    id="silver"
+                    name="membership"
+                    value="Silver"
+                  />
+                  <label class="silver" for="silver"><span>Silver</span></label>
+
+                  <input
+                    type="radio"
+                    id="gold"
+                    name="membership"
+                    value="Gold"
+                  />
+                  <label class="gold" for="gold"><span>Gold</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25"></div>
+              <div class="col-75 ">
+                <input class="cancel_btn" type="button" value="Cancel" />
+
+                <input
+                  id="submit"
+                  class="submit_btn "
+                  type="submit"
+                  value="Save"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script src="custom.js"></script>
+    <script>
+      function IsEmpty() {
+        if (document.forms["frm"].email.value === "") {
+          alert("empty");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
